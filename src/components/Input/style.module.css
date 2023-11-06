@@ -1,0 +1,19 @@
+.input {
+  width: 100%;
+  padding: 7px 10px;
+  box-sizing: border-box;
+  font-size: small;
+  line-height: 20px;
+  border: 1px solid var(--color-grey-300);
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid var(--color-primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  .input {
+    background-color: var(--color-black);
+  }
+}

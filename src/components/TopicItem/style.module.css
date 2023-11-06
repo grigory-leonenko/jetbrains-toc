@@ -1,0 +1,52 @@
+.button {
+  display: flex;
+  align-items: center;
+  padding: 8px 22px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--color-grey-100);
+}
+
+.button--first-level {
+  background-color: var(--color-grey-100);
+}
+
+.button--first-level:hover {
+  background-color: var(--color-grey-200);
+}
+
+.button--second-level {
+  background-color: var(--color-grey-200);
+}
+
+.button--second-level:hover {
+  background-color: var(--color-grey-300);
+}
+
+.button--active, .button--active:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.icon {
+  display: flex;
+  transition: transform 0.3s ease;
+  transform: rotate(0); 
+}
+
+.icon--open {
+  transform: rotate(90deg); 
+}
+
+.text {
+  width: 100%;
+  margin-left: 4px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: small;
+  white-space: nowrap;
+}
