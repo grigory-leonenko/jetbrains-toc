@@ -1,7 +1,7 @@
 .button {
   display: flex;
   align-items: center;
-  padding: 8px 22px;
+  padding: var(--topic-padding);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -10,19 +10,19 @@
   background-color: var(--color-grey-100);
 }
 
-.button--first-level {
+.button--highlight-light {
   background-color: var(--color-grey-100);
 }
 
-.button--first-level:hover {
+.button--highlight-light:hover {
   background-color: var(--color-grey-200);
 }
 
-.button--second-level {
+.button--highlight-dark {
   background-color: var(--color-grey-200);
 }
 
-.button--second-level:hover {
+.button--highlight-dark:hover {
   background-color: var(--color-grey-300);
 }
 
@@ -33,6 +33,7 @@
 
 .icon {
   display: flex;
+  margin-right: 4px;
   transition: transform 0.3s ease;
   transform: rotate(0); 
 }
@@ -43,10 +44,24 @@
 
 .text {
   width: 100%;
-  margin-left: 4px;
   line-height: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: small;
   white-space: nowrap;
+  user-select: none;
+}
+
+.text-highlight {
+  background-color: var(--color-yellow);
+}
+
+.pages {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s ease-out;
+}
+
+.pages-inner {
+  overflow: hidden;
 }

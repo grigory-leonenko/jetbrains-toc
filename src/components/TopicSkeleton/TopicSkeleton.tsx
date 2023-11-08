@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { DEFAULT_PADDING, LEVEL_PADDING } from '../../constants'
 import styles from './style.module.css'
 
@@ -5,7 +6,7 @@ interface Props {
   level: number
 }
 
-export const TopicSkeleton = ({ level }: Props) => {
+export const TopicSkeleton = memo(({ level }: Props) => {
   return (
     <div
       style={{
@@ -16,4 +17,4 @@ export const TopicSkeleton = ({ level }: Props) => {
       <div className={styles.glitter} />
     </div>
   )
-}
+})

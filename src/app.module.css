@@ -9,3 +9,8 @@
   box-sizing: border-box;
   border: 1px solid var(--color-grey-300);
 }
+
+.empty {
+  padding: var(--topic-padding);
+  font-size: small;
+}

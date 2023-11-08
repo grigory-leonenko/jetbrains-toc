@@ -1,10 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { QueryClient, QueryClientProvider } from 'react-query'
+import { TreeProvider } from './store.tsx'
 import App from './App.tsx'
 import './main.css'
 
+const client = new QueryClient()
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    <QueryClientProvider client={client}>
+      <TreeProvider>
+        <App />
+      </TreeProvider>
+    </QueryClientProvider>
   </React.StrictMode>,
 )

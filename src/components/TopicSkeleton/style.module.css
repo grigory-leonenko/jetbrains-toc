@@ -1,5 +1,5 @@
 .skeleton {
-  padding: 8px 22px;
+  padding: var(--topic-padding);
 }
 
 .glitter {
