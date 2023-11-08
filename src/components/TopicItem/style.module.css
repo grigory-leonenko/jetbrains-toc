@@ -55,13 +55,3 @@
 .text-highlight {
   background-color: var(--color-yellow);
 }
-
-.pages {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.5s ease-out;
-}
-
-.pages-inner {
-  overflow: hidden;
-}

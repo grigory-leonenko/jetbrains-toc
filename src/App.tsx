@@ -40,7 +40,13 @@ function App() {
   return (
     <>
       <div className={styles.search}>
-        <Input placeholder="Search" value={filter} disabled={loading} onChange={handleSearch} />
+        <Input
+          placeholder="Search"
+          testId="search-input"
+          value={filter}
+          disabled={loading}
+          onChange={handleSearch}
+        />
       </div>
       <div className={styles.tree}>{content}</div>
     </>

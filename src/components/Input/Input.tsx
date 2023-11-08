@@ -5,12 +5,14 @@ interface Props {
   value: string
   disabled?: boolean
   placeholder?: string
+  testId?: string
   onChange: ChangeEventHandler
 }
 
-export const Input = memo(({ value, disabled, placeholder, onChange }: Props) => {
+export const Input = memo(({ value, disabled, placeholder, testId, onChange }: Props) => {
   return (
     <input
+      data-test-id={testId}
       value={value}
       disabled={disabled}
       placeholder={placeholder}

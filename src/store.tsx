@@ -1,4 +1,4 @@
-import { createContext, useState, useCallback, useMemo, PropsWithChildren } from 'react'
+import { createContext, useState, useCallback, useMemo, PropsWithChildren, useEffect } from 'react'
 import { useDebouncedCallback } from 'use-debounce'
 import { useTopics } from './hooks/topics'
 import { getHighlightIds, getFilteredParams, getParentIds } from './utils/tree'
@@ -30,6 +30,15 @@ export const TreeProvider = ({ children }: PropsWithChildren) => {
     [topics, activeId],
   )
 
+  useEffect(() => {
+    const id = location.pathname.replace('/', '')
+
+    if (id && topics[id]) {
+      setActiveId(id)
+      setOpenIds(getParentIds(topics, id))
+    }
+  }, [topics])
+
   const toggleOpen = useCallback(
     (id: string) => {
       if (!openIds.includes(id)) {
@@ -43,6 +52,7 @@ export const TreeProvider = ({ children }: PropsWithChildren) => {
 
   const changeActive = useCallback((id: string) => {
     setActiveId(id)
+    history.pushState(null, '', id)
   }, [])
 
   const applyFilter = useDebouncedCallback((value: string) => {

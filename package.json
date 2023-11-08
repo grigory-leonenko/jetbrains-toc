@@ -9,7 +9,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "local": "vite",
-    "server": "node server/index.js"
+    "server": "node server/index.js",
+    "test": "npx playwright test"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.7.2",
@@ -24,6 +25,8 @@
     "zustand": "^4.4.6"
   },
   "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.9.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",

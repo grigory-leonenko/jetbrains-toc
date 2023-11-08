@@ -85,9 +85,7 @@ export const TopicItem = memo(({ id }: Props) => {
           {title}
         </p>
       </div>
-      <div className={styles.pages}>
-        {open ? visiblePages.map(page => <TopicItem id={page} key={page} />) : null}
-      </div>
+      {open ? visiblePages.map(page => <TopicItem id={page} key={page} />) : null}
     </>
   )
 })
